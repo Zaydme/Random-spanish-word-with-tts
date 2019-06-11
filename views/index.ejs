@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lango</title>
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css" media="screen" />
+<link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/sombrero.png" />
+
+</head>
+<body>
+
+<div class="container">
+<h1 style="cursor: pointer;" onclick="say('es-ES','<%=translated%>')" class="word floating"><%=translated%>
+  <span style="cursor: pointer;" onclick="rsay('en-US','<%=word%>')" class="small-word"><%=word%></span>
+</h1>
+</div>
+
+</body>
+
+</html>
+
+
+<script>
+function say(lang,mssg) {
+  var msg = new SpeechSynthesisUtterance();
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[0];
+  msg.voiceURI = "native";
+  msg.volume = 1;
+  msg.rate = 1;
+  msg.pitch = 0.8;
+  msg.text = mssg;
+  msg.lang = lang;
+  speechSynthesis.speak(msg);
+}
+window.onload=say('es-ES','<%=translated%>')
+
+</script>
+

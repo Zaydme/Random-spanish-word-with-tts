@@ -1,0 +1,70 @@
+body {
+  background: linear-gradient(270deg, #2c7f6a, #4cdbb7, #7c6eea, #ea6eb4, #dd750f, #1291f9);
+  background-size: 1200% 1200%;
+  
+  -webkit-animation: bkg 46s ease infinite;
+  -moz-animation: bkg 46s ease infinite;
+  -o-animation: bkg 46s ease infinite;
+  animation: bkg 46s ease infinite;
+  
+  }
+  
+  @-webkit-keyframes bkg {
+      0%{background-position:0% 47%}
+      50%{background-position:100% 54%}
+      100%{background-position:0% 47%}
+  }
+  @-moz-keyframes bkg {
+      0%{background-position:0% 47%}
+      50%{background-position:100% 54%}
+      100%{background-position:0% 47%}
+  }
+  @-o-keyframes bkg {
+      0%{background-position:0% 47%}
+      50%{background-position:100% 54%}
+      100%{background-position:0% 47%}
+  }
+  @keyframes bkg { 
+      0%{background-position:0% 47%}
+      50%{background-position:100% 54%}
+      100%{background-position:0% 47%}
+  }
+  .container {
+    width: 100%;
+    height:80%;
+    text-align: center;
+  }
+  .icon {
+    margin-left: -5px;
+  }
+  .word {
+    color: white;
+    left: 0;
+    margin: auto;
+    margin-top: -100px;
+    position: absolute;
+    top: 30%;
+    width: 100%;    
+    font-size: 15vw
+  }
+  .small-word {
+    text-align: center;
+    font-weight: 100;
+    display: inline-block;
+    color: white;
+    top: -20%;
+    width: 100%;
+    font-size: 5vw
+  }
+  .floating {  
+      animation-name: floating;
+      animation-duration: 3s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes floating {
+      from { transform: translate(0,  0px); }
+      65%  { transform: translate(0,  5px); }
+      to   { transform: translate(0, -0px); }    
+  }
